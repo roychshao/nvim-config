@@ -10,7 +10,6 @@ return {
             tag = "legacy",
         },
         "nvimdev/lspsaga.nvim",
-
     },
     config = function()
         local servers = {
