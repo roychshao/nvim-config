@@ -36,6 +36,7 @@ return {
                 { name = 'path' },
                 { name = 'luasnip' },
                 { name = 'buffer' },
+                { name = 'codeium' },
             },
             mapping = cmp.mapping.preset.insert {
                 ["<Tab>"] = cmp.mapping(function(fallback)
@@ -64,7 +65,7 @@ return {
                 ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
             },
             experimental = {
-                ghost_text = true,
+                ghost_text = false,
             }
         }
 

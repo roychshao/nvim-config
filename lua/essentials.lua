@@ -37,6 +37,11 @@ option.clipboard="unnamed,unnamedplus"
 -- Buffer Settings --
 -- buffer.fileenconding = "utf-8"
 
+
+vim.cmd [[
+ autocmd FileType typescript,javascript,typescriptreact,javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
+]]
+
 -- Global Settings --
 global.mapleader = " "
 
