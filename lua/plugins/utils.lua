@@ -28,11 +28,6 @@ return {
         lazy = false,
     },
     {
-        "ellisonleao/glow.nvim",
-        config = true,
-        cmd = "Glow"
-    },
-    {
         "simrat39/symbols-outline.nvim",
         opts = {
             highlight_hovered_item = true,
