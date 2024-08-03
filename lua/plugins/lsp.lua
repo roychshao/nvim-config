@@ -63,8 +63,9 @@ return {
         require("lspsaga").setup()
         require("mason").setup()
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        local ensure_installed = vim.tbl_keys(servers)
         require("mason-lspconfig").setup({
-            ensure_installed = vim.tbl_keys(servers),
+            ensure_installed = ensure_installed,
             handlers = {
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
@@ -75,5 +76,8 @@ return {
                 end,
             }
         })
+        vim.api.nvim_create_user_command("MasonInstallAll", function()
+            vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
+        end, {})
     end
 }
