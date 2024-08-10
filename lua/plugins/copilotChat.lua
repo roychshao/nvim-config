@@ -4,10 +4,11 @@ return {
         branch = "canary",
         dependencies = {
             { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-            { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+            { "nvim-lua/plenary.nvim" },  -- for curl, log wrapper
         },
         opts = {
             debug = true, -- Enable debugging
+            model = 'gpt-4o-2024-05-13',
             -- See Configuration section for rest
             -- window = {
             --     layout = 'float',
