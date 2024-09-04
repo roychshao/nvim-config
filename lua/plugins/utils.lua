@@ -40,6 +40,8 @@ return {
 				"vimdoc",
 				"xml",
 				"yaml",
+                "toml",
+                "solidity",
 			},
 			highlight = {
 				enable = true,

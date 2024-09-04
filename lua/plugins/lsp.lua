@@ -26,6 +26,9 @@ return {
             biome = {},
             clangd = {},
             vtsls = {},
+            taplo = {},
+            solidity = {},
+            solc = {}
         }
         local on_attach = function(_, bufnr)
             -- Enable completion triggered by <c-x><c-o>

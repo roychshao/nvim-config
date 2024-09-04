@@ -2,7 +2,7 @@ return {
     {
         "akinsho/bufferline.nvim",
         event = "VeryLazy",
-        commit = "0b2fd86",
+        -- commit = "0b2fd86",
         config = function()
             require("bufferline").setup({
                 options = {
