@@ -148,4 +148,17 @@ return {
 			},
 		},
 	},
+{
+    'smoka7/hop.nvim',
+    version = "*",
+    opts = {
+        keys = 'etovxqpdygfblzhckisuran'
+    },
+    config = function()
+        local hop = require('hop')
+        hop.setup()
+        vim.api.nvim_set_keymap('n', '<leader>hw', ":HopWord<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', '<leader>hl', ":HopWordCurrentLine<CR>", { noremap = true, silent = true })
+    end
+    }
 }
