@@ -11,5 +11,9 @@ return {
                 width = 30,
             },
         })
+        vim.cmd([[
+            :hi      NvimTreeNormal    guibg=#282828
+            :hi      NvimTreeEndOfBuffer guibg=#282828
+        ]])
     end,
 }

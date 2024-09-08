@@ -118,23 +118,23 @@ return {
 			symbol_blacklist = {},
 			symbols = {
 				File = { icon = "", hl = "@text.uri" },
-				Module = { icon = "", hl = "@namespace" },
-				Namespace = { icon = "", hl = "@namespace" },
-				Package = { icon = "", hl = "@namespace" },
+				Module = { icon = "Module", hl = "@namespace" },
+				Namespace = { icon = "Namespace", hl = "@namespace" },
+				Package = { icon = "Package", hl = "@namespace" },
 				Class = { icon = "𝓒", hl = "@type" },
 				Method = { icon = "ƒ", hl = "@method" },
 				Property = { icon = "", hl = "@method" },
-				Field = { icon = "", hl = "@field" },
+				Field = { icon = "field", hl = "@field" },
 				Constructor = { icon = "", hl = "@constructor" },
 				Enum = { icon = "ℰ", hl = "@type" },
-				Interface = { icon = "ﰮ", hl = "@type" },
+				Interface = { icon = "Interface", hl = "@type" },
 				Function = { icon = "", hl = "@function" },
 				Variable = { icon = "", hl = "@constant" },
 				Constant = { icon = "", hl = "@constant" },
 				String = { icon = "𝓐", hl = "@string" },
 				Number = { icon = "#", hl = "@number" },
 				Boolean = { icon = "⊨", hl = "@boolean" },
-				Array = { icon = "", hl = "@constant" },
+				Array = { icon = "Array", hl = "@constant" },
 				Object = { icon = "⦿", hl = "@type" },
 				Key = { icon = "🔐", hl = "@type" },
 				Null = { icon = "NULL", hl = "@type" },
@@ -143,8 +143,8 @@ return {
 				Event = { icon = "🗲", hl = "@type" },
 				Operator = { icon = "+", hl = "@operator" },
 				TypeParameter = { icon = "𝙏", hl = "@parameter" },
-				Component = { icon = "", hl = "@function" },
-				Fragment = { icon = "", hl = "@constant" },
+				Component = { icon = "Component", hl = "@function" },
+				Fragment = { icon = "Fragment", hl = "@constant" },
 			},
 		},
 	},
@@ -157,8 +157,8 @@ return {
     config = function()
         local hop = require('hop')
         hop.setup()
-        vim.api.nvim_set_keymap('n', '<leader>hw', ":HopWord<CR>", { noremap = true, silent = true })
-        vim.api.nvim_set_keymap('n', '<leader>hl', ":HopWordCurrentLine<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', '<leader>h', ":HopWord<CR>", { noremap = true, silent = true })
+        -- vim.api.nvim_set_keymap('n', '<leader>hl', ":HopWordCurrentLine<CR>", { noremap = true, silent = true })
     end
     }
 }
