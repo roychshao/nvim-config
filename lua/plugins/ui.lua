@@ -4,6 +4,8 @@ return {
         event = "VeryLazy",
         -- commit = "0b2fd86",
         config = function()
+            vim.keymap.set("n", "gT", ":BufferLineCyclePrev<CR>", { desc = "BufferLine toggle to previous one" })
+            vim.keymap.set("n", "gt", ":BufferLineCycleNext<CR>", { desc = "BufferLine toggle to next one" })
             require("bufferline").setup({
                 options = {
                     separator_style = "slant",

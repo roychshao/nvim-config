@@ -28,19 +28,19 @@ option.backup = false
 option.updatetime = 50
 option.mouse = "a"
 option.undofile = true
-option.undodir = vim.fn.expand('$HOME/.local/share/nvim/undo')
+option.undodir = vim.fn.expand("$HOME/.local/share/nvim/undo")
 option.wrap = true
 option.splitright = true
 option.splitbelow = true
-option.clipboard="unnamed,unnamedplus"
+option.clipboard = "unnamed,unnamedplus"
 
 -- Buffer Settings --
 -- buffer.fileenconding = "utf-8"
 
-
-vim.cmd [[
- autocmd FileType typescript,javascript,typescriptreact,javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
-]]
+-- indent custumization --
+vim.cmd([[
+ autocmd FileType java,typescript,javascript,typescriptreact,javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
+]])
 
 -- Global Settings --
 global.mapleader = " "
@@ -50,10 +50,4 @@ global.mapleader = " "
 vim.keymap.set("v", "K", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '<-2<CR>gv=gv")
 -- in visual mode and normal mode, select a block of text and click <space + y> to copy the selected text
-vim.keymap.set({ "v", "n" }, "<leader>y", "\"+y")
--- bufferline.nvim, use "gt" and "gT" to switch between tabstop
-vim.keymap.set("n", "gT", ":BufferLineCyclePrev<CR>", opt)
-vim.keymap.set("n", "gt", ":BufferLineCycleNext<CR>", opt)
-vim.keymap.set("n", "<F2>", ":NvimTreeToggle<CR>", opt)
-vim.keymap.set("n", "cc", ":CopilotChat<CR>", opt)
-vim.keymap.set("n", "<F3>", ":SymbolsOutline<CR>", opt)
+vim.keymap.set({ "v", "n" }, "<leader>y", '"+y')

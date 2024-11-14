@@ -10,15 +10,16 @@ return {
             debug = true, -- Enable debugging
             model = 'gpt-4o-2024-05-13',
             -- See Configuration section for rest
-            -- window = {
-            --     layout = 'float',
-            --     relative = 'cursor',
-            --     width = 0.7,
-            --     height = 0.5,
-            --     row = 0,
-            --     border = 'double',
-            -- }
+            window = {
+                -- layout = 'float',
+                --     relative = 'cursor',
+                --     width = 0.7,
+                --     height = 0.5,
+                --     row = 0,
+                --     border = 'double',
+            }
         },
+        vim.keymap.set("n", "cc", ":CopilotChat<CR>", { desc = "CopilotChatOpen" })
         -- See Commands section for default commands if you want to lazy load on them
     },
 }
