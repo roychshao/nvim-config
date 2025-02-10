@@ -42,6 +42,7 @@ return {
 					"yaml",
 					"toml",
 					"solidity",
+					"jsonc",
 				},
 				highlight = {
 					enable = true,
