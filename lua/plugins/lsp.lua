@@ -41,9 +41,11 @@ return {
 				vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
 			end
 
-			nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-			nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+			nmap("gD", "<cmd>Lspsaga goto_type_definition<CR>", "[G]oto Type [D]efinition")
+			nmap("gd", "<cmd>Lspsaga goto_definition<CR>", "[G]oto [D]efinition")
 			nmap("K", "<cmd>Lspsaga hover_doc<CR>", "Hover Documentation")
+			nmap("st", "<cmd>Lspsaga subtypes<CR>", "SubTypes")
+			nmap("rn", "<cmd>Lspsaga rename<CR>", "ReName")
 			nmap("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 			nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
 			nmap("<leader>wa", vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
