@@ -51,3 +51,24 @@ vim.keymap.set("v", "K", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '<-2<CR>gv=gv")
 -- in visual mode and normal mode, select a block of text and click <space + y> to copy the selected text
 vim.keymap.set({ "v", "n" }, "<leader>y", '"+y')
+--
+-- -- Nvim Tree dynamic root
+vim.api.nvim_create_autocmd("BufEnter", {
+    callback = function()
+
+        local ignored_filetypes = {
+            ["DiffviewLog"] = true,
+            ["DiffviewPopup"] = true,
+            ["DiffviewFiles"] = true,
+            ["DiffviewFileHistory"] = true,
+        }
+
+        if ignored_filetypes[vim.bo.filetype] then
+            return
+        end
+
+        local path = vim.fn.expand("%:p:h")
+        if path:match("^diffview:") then return end
+        vim.cmd("cd " .. path)
+    end
+})
