@@ -6,7 +6,10 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     config = function()
+        local api = require("nvim-tree.api")
         vim.keymap.set("n", "<F2>", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+        vim.keymap.set("n", "vs", api.node.open.vertical, { desc = "Open in vertical split" })
+        vim.keymap.set("n", "hs", api.node.open.horizontal, { desc = "Open in horizontal split" })
         require("nvim-tree").setup({
             view = {
                 width = 30,
