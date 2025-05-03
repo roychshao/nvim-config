@@ -15,6 +15,7 @@ return {
         },
         config = function()
             local noice = require("noice")
+            local notify = require("notify")
             noice.setup({
                 lsp = {
                     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -37,25 +38,6 @@ return {
                     view = "cmdline_popup",
                     opts = {},
                 },
-                views = {
-                    -- 配置 notify 視圖在右下角
-                    notify = {
-                        position = {
-                            row = vim.o.lines - 1,  -- 最後一行
-                            col = vim.o.columns - 1, -- 最右列
-                        },
-                        -- 其他可選配置
-                        size = {
-                            width = "auto",
-                            height = "auto",
-                        },
-                        border = {
-                            style = "rounded",
-                            padding = { 0, 1 },
-                        },
-                    },
-                    -- 其他視圖配置...
-                },
                 messages = {
                     enabled = true,
                     view = "notify",
@@ -64,6 +46,9 @@ return {
                     view_history = "messages",
                     view_search = "virtualtext",
                 },
+            })
+            notify.setup({
+                top_down = true, 　-- set to false if you want to make the message on the right bottom
             })
         end,
     },
@@ -77,11 +62,12 @@ return {
             })
 
             vim.cmd [[
-                highlight! DiagnosticVirtualTextError guifg=#a14a4a guibg=NONE
-                highlight! DiagnosticVirtualTextWarn  guifg=#b68c3e guibg=NONE
-                highlight! DiagnosticVirtualTextInfo  guifg=#5e81ac guibg=NONE
-                highlight! DiagnosticVirtualTextHint  guifg=#6a9d68 guibg=NONE
+                highlight! DiagnosticVirtualTextError guifg=#907070 guibg=NONE
+                highlight! DiagnosticVirtualTextWarn  guifg=#908870 guibg=NONE
+                highlight! DiagnosticVirtualTextInfo  guifg=#707890 guibg=NONE
+                highlight! DiagnosticVirtualTextHint  guifg=#708870 guibg=NONE
             ]]
+            vim.keymap.set("n", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
         end,
     },
 }
