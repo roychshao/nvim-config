@@ -24,9 +24,9 @@ return {
             root_dirs = {},
             prefer_startup_root = false
         })
-        vim.cmd([[
-            :hi      NvimTreeNormal    guibg=#282828
-            :hi      NvimTreeEndOfBuffer guibg=#282828
-        ]])
+        -- vim.cmd([[
+        --     :hi      NvimTreeNormal    guibg=#282828
+        --     :hi      NvimTreeEndOfBuffer guibg=#282828
+        -- ]])
     end,
 }
