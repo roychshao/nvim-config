@@ -39,7 +39,7 @@ option.clipboard = "unnamed,unnamedplus"
 
 -- indent custumization --
 vim.cmd([[
- autocmd FileType java,typescript,javascript,typescriptreact,javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
+ autocmd FileType typescript,javascript,typescriptreact,javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
 ]])
 
 -- Global Settings --
@@ -68,7 +68,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
         end
 
         local path = vim.fn.expand("%:p:h")
+
+        if path == nil or path == "" then return end
+        if path:match("^jdt:") then return end
         if path:match("^diffview:") then return end
+
         vim.cmd("cd " .. path)
     end
 })

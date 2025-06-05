@@ -1,29 +1,29 @@
 return {
-    -- {
-    --     'sainnhe/gruvbox-material',
-    --     name = 'gruvbox-material',
-    --     lazy = false,
-    --     priority = 1000,
-    --     dependencies = {
-    --         "nvim-lualine/lualine.nvim",
-    --         "nvim-tree/nvim-web-devicons",
-    --         "utilyre/barbecue.nvim",
-    --         "SmiteshP/nvim-navic",
-    --     },
-    --     config = function()
-    --         require('lualine').setup({
-    --             options = {
-    --                 theme = 'gruvbox-material'
-    --             },
-    --         })
-    --         require('barbecue').setup {
-    --             theme = 'gruvbox-material'
-    --         }
-    --         vim.g.gruvbox_material_enable_italic = true
-    --         vim.g.gruvbox_material_foreground = 'mix'
-    --         vim.cmd [[colorscheme gruvbox-material]]
-    --     end
-    -- },
+    {
+        'sainnhe/gruvbox-material',
+        name = 'gruvbox-material',
+        lazy = false,
+        priority = 1000,
+        dependencies = {
+            "nvim-lualine/lualine.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "utilyre/barbecue.nvim",
+            "SmiteshP/nvim-navic",
+        },
+        config = function()
+            require('lualine').setup({
+                options = {
+                    theme = 'gruvbox-material'
+                },
+            })
+            require('barbecue').setup {
+                theme = 'gruvbox-material'
+            }
+            vim.g.gruvbox_material_enable_italic = true
+            vim.g.gruvbox_material_foreground = 'mix'
+            vim.cmd [[colorscheme gruvbox-material]]
+        end
+    },
     -- {
     --     "rebelot/kanagawa.nvim",
     --     name = "kanagawa",
@@ -88,30 +88,30 @@ return {
     --         vim.cmd [[colorscheme kanagawa]]
     --     end
     -- },
-    {
-        "thesimonho/kanagawa-paper.nvim",
-        name = 'kanagawa-paper',
-        lazy = false,
-        priority = 1000,
-        dependencies = {
-            "nvim-lualine/lualine.nvim",
-            "nvim-tree/nvim-web-devicons",
-            "utilyre/barbecue.nvim",
-            "SmiteshP/nvim-navic",
-        },
-        config = function()
-            local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
-            require('lualine').setup({
-                options = {
-                    theme = kanagawa_paper
-                },
-            })
-            require('barbecue').setup {
-                theme = 'kanagawa-paper'
-            }
-            vim.g.gruvbox_material_enable_italic = true
-            vim.g.gruvbox_material_foreground = 'mix'
-            vim.cmd [[colorscheme kanagawa-paper]]
-        end
-    },
+    -- {
+    --     "thesimonho/kanagawa-paper.nvim",
+    --     name = 'kanagawa-paper',
+    --     lazy = false,
+    --     priority = 1000,
+    --     dependencies = {
+    --         "nvim-lualine/lualine.nvim",
+    --         "nvim-tree/nvim-web-devicons",
+    --         "utilyre/barbecue.nvim",
+    --         "SmiteshP/nvim-navic",
+    --     },
+    --     config = function()
+    --         local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
+    --         require('lualine').setup({
+    --             options = {
+    --                 theme = kanagawa_paper
+    --             },
+    --         })
+    --         require('barbecue').setup {
+    --             theme = 'kanagawa-paper'
+    --         }
+    --         vim.g.gruvbox_material_enable_italic = true
+    --         vim.g.gruvbox_material_foreground = 'mix'
+    --         vim.cmd [[colorscheme kanagawa-paper]]
+    --     end
+    -- },
 }

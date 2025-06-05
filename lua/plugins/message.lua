@@ -47,9 +47,9 @@ return {
                     view_search = "virtualtext",
                 },
             })
-            notify.setup({
-                top_down = true, 　-- set to false if you want to make the message on the right bottom
-            })
+            -- notify.setup({
+            --     top_down = true, 　-- set to false if you want to make the message on the right bottom
+            -- })
         end,
     },
     {

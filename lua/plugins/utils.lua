@@ -111,9 +111,4 @@ return {
 			-- vim.api.nvim_set_keymap('n', '<leader>hl', ":HopWordCurrentLine<CR>", { noremap = true, silent = true })
 		end,
 	},
-    {
-        "bullets-vim/bullets.vim",
-        opt = {},
-        config = false
-    }
 }
