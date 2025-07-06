@@ -62,10 +62,10 @@ return {
             })
 
             vim.cmd [[
-                highlight! DiagnosticVirtualTextError guifg=#907070 guibg=NONE
-                highlight! DiagnosticVirtualTextWarn  guifg=#908870 guibg=NONE
-                highlight! DiagnosticVirtualTextInfo  guifg=#707890 guibg=NONE
-                highlight! DiagnosticVirtualTextHint  guifg=#708870 guibg=NONE
+                highlight! DiagnosticVirtualTextError guifg=#b94c42 guibg=NONE
+                highlight! DiagnosticVirtualTextWarn  guifg=#b58f2f guibg=NONE
+                highlight! DiagnosticVirtualTextInfo  guifg=#5c6f6a guibg=NONE
+                highlight! DiagnosticVirtualTextHint  guifg=#5f7d63 guibg=NONE
             ]]
             vim.keymap.set("n", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
         end,

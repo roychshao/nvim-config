@@ -16,6 +16,7 @@ return {
 
         local project_name = vim.fn.fnamemodify(root_dir, ":p:h:t")
         local workspace_dir = home .. "/.local/share/eclipse/" .. project_name
+        local java_debug_path = home .. "/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-0.53.1.jar"
 
         local config = {
             cmd = {
@@ -43,7 +44,9 @@ return {
                 },
             },
             init_options = {
-                bundles = {},
+                bundles = {
+                    vim.fn.glob(java_debug_path, 1)
+                },
             },
         }
 

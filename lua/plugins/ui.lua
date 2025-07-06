@@ -30,7 +30,7 @@ return {
                 return {
                     {
                         { '  ', hl = theme.head },
-                        line.sep('', theme.head, theme.fill),
+                        line.sep(' ', theme.head, theme.fill),
                     },
                     line.tabs().foreach(function(tab)
 

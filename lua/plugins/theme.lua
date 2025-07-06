@@ -13,7 +13,55 @@ return {
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = 'gruvbox-material'
+                    theme = 'gruvbox-material',
+                    component_separators = { left = ')', right = '('},
+                    globalstatus = true,
+                },
+                sections = {
+                    lualine_a = {
+                        {
+                            'mode',
+                            separator = { right = '' }
+                        }
+                    },
+                    lualine_b = {
+                        {
+                            'branch',
+                            icon = '',
+                            separator = { right = '' }
+                        }
+                    },
+                    lualine_c = {
+                        {
+                            'filename',
+                            path = 1,
+                        },
+                        {
+                            'diff',
+                        },
+                        {
+                            'diagnostics',
+                            symbols = { error = ' ', warn = ' ', info = ' ', hint = '󰌵 ' },
+                        }
+                    },
+                    lualine_x = {
+                        {
+                            'filetype',
+                            separator = { left = '' },
+                        },
+                    },
+                    lualine_y = {
+                        {
+                            'progress',
+                            separator = { left = '' },
+                        }
+                    },
+                    lualine_z = {
+                        {
+                            'location',
+                            separator = { left = '' },
+                        }
+                    },
                 },
             })
             require('barbecue').setup {
