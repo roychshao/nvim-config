@@ -27,6 +27,23 @@ return {
                 dapui.close()
             end
 
+            dap.configurations.java = {
+                {
+                    type = 'java',
+                    request = 'attach',
+                    name = "Attach to local:5005",
+                    hostName = "127.0.0.1",
+                    port = 5005,
+                },
+                {
+                    type = 'java',
+                    request = 'attach',
+                    name = "Attach to selab146",
+                    hostName = '140.112.90.146',
+                    port = 5005,
+                }
+            }
+
             vim.keymap.set("n", "<Leader>dc", function()dap.continue()end, { desc = "Debuger Continue" })
             vim.keymap.set("n", "<Leader>so", function()dap.step_over()end, { desc = "Debugger Step Over" })
             vim.keymap.set("n", "<Leader>si", function()dap.step_into()end, { desc = "Debugger Step Into" })

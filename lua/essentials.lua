@@ -39,7 +39,7 @@ option.clipboard = "unnamed,unnamedplus"
 
 -- indent custumization --
 vim.cmd([[
- autocmd FileType typescript,javascript,typescriptreact,javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
+ autocmd FileType typescript,javascript,typescriptreact,javascriptreact,json setlocal shiftwidth=2 softtabstop=2 expandtab
 ]])
 
 -- Global Settings --

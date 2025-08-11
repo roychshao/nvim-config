@@ -46,6 +46,7 @@ return {
 
                 nmap("gD", "<cmd>Lspsaga goto_type_definition<CR>", "[G]oto Type [D]efinition")
                 nmap("gd", "<cmd>Lspsaga goto_definition<CR>", "[G]oto [D]efinition")
+                nmap("gR", "<cmd>Lspsaga finder<CR>", "[G]oto [R]eferences")
                 nmap("pd", "<cmd>Lspsaga peek_definition<CR>", "[S]ee [D]efinition")
                 nmap("K", "<cmd>Lspsaga hover_doc<CR>", "Hover Documentation")
                 nmap("st", "<cmd>Lspsaga subtypes<CR>", "SubTypes")
