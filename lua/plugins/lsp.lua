@@ -63,7 +63,6 @@ return {
                 nmap("<leader>ca", "<cmd>Lspsaga code_action<CR>", "[C]ode [A]ction")
                 nmap("<leader>da", require("telescope.builtin").diagnostics, "[D]i[A]gnostics")
                 nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-                -- nmap('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
                 nmap("<space>f", function()
                     vim.lsp.buf.format({ async = true })
                 end, "[F]ormat code")

@@ -21,8 +21,26 @@ return {
 				}))
 			end,
 		},
-		{ "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>" },
-		{ "<leader>lg", "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
+        {
+			"<leader>ff",
+			function()
+				local root = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+				if vim.v.shell_error ~= 0 then
+					root = vim.loop.cwd() -- fallback to current path if no git directory found
+				end
+				require("telescope.builtin").find_files({ cwd = root })
+			end,
+		},
+        {
+			"<leader>lg",
+			function()
+				local root = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+				if vim.v.shell_error ~= 0 then
+					root = vim.loop.cwd()
+				end
+				require("telescope.builtin").live_grep({ cwd = root })
+			end,
+		},
 		-- { "<leader>ht", "<cmd>lua require('telescope.builtin').help_tags()<cr>" },
 		{ "<leader>bi", "<cmd>lua require('telescope.builtin').builtin()<cr>" },
 		-- { '<leader>fm', "<cmd>lua require('telescope.builtin').marks()<cr>" },
