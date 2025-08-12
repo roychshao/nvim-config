@@ -70,7 +70,7 @@ return {
             vim.g.gruvbox_material_enable_italic = true
             vim.g.gruvbox_material_foreground = 'mix'
             vim.g.gruvbox_material_enable_bold = 1
-            vim.g.gruvbox_material_menu_selection_background = 'green'
+            vim.g.gruvbox_material_menu_selection_background = 'blue'
             vim.g.gruvbox_material_spell_foreground = 'colored'
             vim.g.gruvbox_material_ui_contrast = 'high'
             vim.cmd [[colorscheme gruvbox-material]]
