@@ -75,11 +75,30 @@ return {
     {
         "sphamba/smear-cursor.nvim",
         opts = {
-            cursor_color = "#D8A657",
+            cursor_color = "#945e80",
             stiffness = 0.8,
             dampling = 0.5,
-            trailing_stiffness = 0.2,
+            trailing_stiffness = 0.15,
             gamma = 1,
         }
+    },
+    {
+        "yuttie/comfortable-motion.vim",
+        config = function ()
+            local modes = { 'n', 'v', 'x', 's', 'o' }
+
+            for _, mode in ipairs(modes) do
+                vim.keymap.set(mode, "<ScrollWheelUp>", ":call comfortable_motion#flick(-25)<CR>", { noremap = true, silent = true })
+                vim.keymap.set(mode, "<ScrollWheelDown>", ":call comfortable_motion#flick(25)<CR>", { noremap = true, silent = true })
+                vim.keymap.set(mode, "<PageUp>", ":call comfortable_motion#flick(-200)<CR>", { noremap = true, silent = true })
+                vim.keymap.set(mode, "<PageDown>", ":call comfortable_motion#flick(200)<CR>", { noremap = true, silent = true })
+            end
+        end
+    },
+    {
+        "dstein64/nvim-scrollview",
+        opts = function ()
+            vim.g.scrollview_character = "█"
+        end
     }
 }
