@@ -59,6 +59,14 @@ return {
             vim.diagnostic.config({
                 virtual_text = false,
                 virtual_lines = false,
+                signs = {
+                    text = {
+                        [vim.diagnostic.severity.ERROR] = "",
+                        [vim.diagnostic.severity.WARN]  = "",
+                        [vim.diagnostic.severity.HINT]  = "",
+                        [vim.diagnostic.severity.INFO]  = "",
+                    },
+                },
             })
 
             vim.cmd [[
@@ -66,7 +74,7 @@ return {
                 highlight! DiagnosticVirtualTextWarn  guifg=#b58f2f guibg=NONE
                 highlight! DiagnosticVirtualTextInfo  guifg=#5c6f6a guibg=NONE
                 highlight! DiagnosticVirtualTextHint  guifg=#5f7d63 guibg=NONE
-            ]]
+                ]]
             vim.keymap.set("n", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
         end,
     },
