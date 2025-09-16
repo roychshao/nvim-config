@@ -111,5 +111,12 @@ return {
             -- { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
             -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
         },
+    },
+    {
+        "Pocco81/true-zen.nvim",
+        config = function()
+            local trueZen = require("true-zen.focus")
+            vim.keymap.set("n", "<Leader>zf", function()trueZen.toggle()end, { desc = "TrueZen Focus" })
+        end,
     }
 }

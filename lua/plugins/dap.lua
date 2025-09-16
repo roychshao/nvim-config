@@ -33,7 +33,7 @@ return {
                     request = 'attach',
                     name = "Attach to local:5005",
                     hostName = "127.0.0.1",
-                    port = 5005,
+                    port = 5005
                 },
                 {
                     type = 'java',
@@ -41,6 +41,29 @@ return {
                     name = "Attach to selab146",
                     hostName = '140.112.90.146',
                     port = 5005,
+                }
+            }
+
+            dap.adapters.python = {
+                type = 'executable',
+                command = '/home/royshao/Codes/NTU/selab/AutoLabeling/descriptionGenerator/venv/bin/python',
+                args = { '-m', 'debugpy.adapter' }
+            }
+
+            dap.configurations.python = {
+                {
+                    type = 'python',
+                    request = 'launch',
+                    name = "Launch current file",
+                    program = "${file}",
+                    pythonPath = '/home/royshao/Codes/NTU/selab/AutoLabeling/descriptionGenerator/venv/bin/python'
+                },
+                {
+                    type = 'python',
+                    request = 'attach',
+                    name = "Attach to selab146",
+                    hostName = '140.112.90.146',
+                    port = 5678,
                 }
             }
 
